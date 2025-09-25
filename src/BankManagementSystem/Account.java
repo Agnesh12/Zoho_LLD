@@ -3,10 +3,13 @@ package BankManagementSystem;
 public class Account {
 
     private String name;
-    private String account_Id;
+    private  String account_Id;
     private String phoneNumber;
     private String address;
     private long balance;
+    public Account() {
+
+    }
     public Account( String name, String account_Id, String phoneNumber, String address, long balance) {
 
         this.name = name;
@@ -50,26 +53,12 @@ public class Account {
     public long getBalance() {
         return balance;
     }
-
-    public boolean depositMoney(long deposit) {
-        if(deposit > 0) {
-            balance +=  deposit;
-            return true;
-        }
-        else {
-            System.out.println("Invalid Amount");
-            return false;
-        }
-
+    public void totalBalance(long money) {
+        this.balance += money;
     }
-    public boolean withdrawMoney(long money) {
-        if(money > 0 && money <= balance) {
-            balance -= money;
-            return true;
-        }
-        else {
-            System.out.println("Insufficient Money or Invalid Amount");
-            return false;
-        }
+    public  void withdraw(long money) {
+        this.balance -= money;
     }
+
+
 }
