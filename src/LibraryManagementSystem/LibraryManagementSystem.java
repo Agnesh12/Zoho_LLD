@@ -1,8 +1,10 @@
 package LibraryManagementSystem;
 import java.util.*;
 public class LibraryManagementSystem {
+
     public static void main(String[] args) {
         Library library = new Library();
+
         Scanner tempScan = new Scanner(System.in);
         while(true) {
             System.out.println("=========================Library Management System====================================");
@@ -35,10 +37,16 @@ public class LibraryManagementSystem {
                     library.ShowBooks();
                     break;
                 case 4:
-                   // library.SearchByTitle();
+                    System.out.println("Enter The Book Title To Search");
+                    String bookTitle = tempScan.next();
+                    Book searchBook = library.SearchByTitle(bookTitle);
+                    System.out.println(searchBook != null ? searchBook : "Book Not Found");
                     break;
                 case 5:
-                   // library.SearchByAuthor();
+                    System.out.println("Enter The Book Author To Search");
+                    String authorName = tempScan.next();
+                    Book searchAuthor = library.SearchByAuthor(authorName);
+                    System.out.println((searchAuthor != null) ? searchAuthor : "Book Not Found");
                     break;
                 case 6:
                    // library.IssueBook();
