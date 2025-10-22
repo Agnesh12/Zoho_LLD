@@ -7,5 +7,5 @@ public class AiPlayer {
         this.name = name;
         this.mark = mark;
     }
-    //public
+
 }

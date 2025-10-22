@@ -25,7 +25,7 @@ public class TicTacToe {
         }
 
     }
-    public void placeMark(int row, int col, char mark) {
+    static public void placeMark(int row, int col, char mark) {
         if(row >= 0 && row <= 2 && col >= 0 && col <= 2) {
             board[row][col] = mark;
         }
